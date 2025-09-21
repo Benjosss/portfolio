@@ -1,0 +1,37 @@
+{
+  "projects": [
+    {
+      "id": "projet-1",
+      "title": "Application Web E-commerce",
+      "description": "Une application e-commerce complète avec panier, paiement et gestion des commandes.",
+      "technologies": ["React", "Node.js", "MongoDB", "Express"],
+      "image": "assets/images/projects/ecommerce-app.jpg",
+      "demo_url": "https://demo-ecommerce.com",
+      "github_url": "https://github.com/username/ecommerce-app",
+      "date": "2024-03-15",
+      "category": "Full Stack"
+    },
+    {
+      "id": "projet-2",
+      "title": "Dashboard Analytics",
+      "description": "Tableau de bord interactif pour visualiser des données analytiques en temps réel.",
+      "technologies": ["Vue.js", "Chart.js", "Firebase"],
+      "image": "assets/images/projects/dashboard.jpg",
+      "demo_url": "https://analytics-dashboard-demo.com",
+      "github_url": "https://github.com/username/analytics-dashboard",
+      "date": "2024-01-20",
+      "category": "Frontend"
+    },
+    {
+      "id": "projet-3",
+      "title": "API REST Blog",
+      "description": "API REST complète pour un système de blog avec authentification et gestion des articles.",
+      "technologies": ["Python", "Django", "PostgreSQL", "JWT"],
+      "image": "assets/images/projects/blog-api.jpg",
+      "demo_url": null,
+      "github_url": "https://github.com/username/blog-api",
+      "date": "2023-11-10",
+      "category": "Backend"
+    }
+  ]
+}
