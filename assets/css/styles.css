@@ -3,10 +3,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Courier", Tahoma, Verdana, sans-serif;
+    color: var(--text-color);
 }
 
 body{
-    --laptop-color: #040404;
     --primary-color: #222629;
     --secondary-color: #474B4F;
     --secondary-color-transparent: #474B4F80;
@@ -15,7 +15,7 @@ body{
     --second-accent-color: #86C232;
     --text-color: white;
 
-    background-color: var(--laptop-color);
+    background-color: var(--primary-color);
 }
 
 
@@ -28,6 +28,7 @@ body{
     background-color: var(--secondary-color-transparent);
     font-size: 1.5rem;
     backdrop-filter: blur(10px);
+    z-index: 2;
 }
 
 .nav-container{
@@ -43,6 +44,7 @@ body{
 
 .nav-menu{
     padding: 1rem;
+    display: inline;
 }
 
 .nav-menu a:hover{
@@ -70,14 +72,55 @@ body{
 .hero{
     padding: 6rem 2rem 2rem 2rem;
     position: relative;
+    z-index: 1;
 }
 
-.hero-bg{
-    width: 80vw;
+.hero-image{
+    width: 40vw;
     height: auto;
     object-fit: cover;
-    object-position: center;
-    display: block;
-    margin: auto;
 }
 
+.hero-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.hero-grid-text{
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+.hero-grid-image{
+    grid-column: 2 / 2;
+    grid-row: 1;
+}
+
+.hero-grid-text h1{
+    font-family: 'Courier New', monospace;
+    border-right: 3px solid currentColor;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: 
+        typing 3s steps(27, end) forwards,
+        blink-caret 5s steps(30, end) forwards;
+}
+
+.hero-grid-text-name {
+    color: var(--first-accent-color);
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to {width: 100%;}
+}
+
+@keyframes blink-caret {
+    from { border-color: currentColor; }
+    50% { border-color: currentColor; }
+    99% {border-color: transparent;}
+    to {border-color: transparent;}
+}
