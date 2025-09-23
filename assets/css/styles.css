@@ -68,7 +68,7 @@ body{
   }
 }
 
-/* Hero Section */
+/* Hero Sectioten */
 .hero{
     padding: 6rem 2rem 2rem 2rem;
     position: relative;
@@ -76,9 +76,9 @@ body{
 }
 
 .hero-image{
-    width: 40vw;
-    height: auto;
-    object-fit: cover;
+    width: 30vw;
+    height: 20vh;
+    object-fit: contain;
 }
 
 .hero-grid{
@@ -86,41 +86,49 @@ body{
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
+    align-items: center;
 }
 
 .hero-grid-text{
     grid-column: 1 / 2;
     grid-row: 1;
+    justify-self: end;
 }
 
 .hero-grid-image{
     grid-column: 2 / 2;
     grid-row: 1;
+    justify-self: start;
 }
 
-.hero-grid-text h1{
+.hero-grid-text-name{
     font-family: 'Courier New', monospace;
-    border-right: 3px solid currentColor;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    animation: 
-        typing 3s steps(27, end) forwards,
-        blink-caret 5s steps(30, end) forwards;
-}
-
-.hero-grid-text-name {
     color: var(--first-accent-color);
 }
 
-@keyframes typing {
-    from { width: 0; }
-    to {width: 100%;}
+/* Featured Projects */
+.featured-projects{
+    margin-top: 100px;
 }
 
-@keyframes blink-caret {
-    from { border-color: currentColor; }
-    50% { border-color: currentColor; }
-    99% {border-color: transparent;}
-    to {border-color: transparent;}
+
+.featured-projects-title{
+    text-align: center;
+}
+
+/* Skills */
+.skills{
+    margin-top: 100px;
+}
+
+.skills-title{
+    text-align: center;
+}
+
+/* Footer */
+footer{
+    position: absolute;
+    bottom: 0;
+    margin: 10px;
+    font-size: 20px;
 }
